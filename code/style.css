@@ -1,0 +1,240 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Changes the default 16px font size to 10px */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Bellefair", serif;
+  position: relative;
+}
+
+/*************** DESKTOP VIEW ***************/
+
+/* DESKTOP HEADER */
+header {
+  max-width: 137rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+}
+
+.line {
+  position: absolute;
+  width: 43.3rem;
+  height: 0.11rem;
+  z-index: 2;
+  top: 5rem;
+  left: 15rem;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.nav-list {
+  display: flex;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(1.777rem);
+  padding: 0 16.5rem 0 12.5rem;
+}
+
+.nav-list li {
+  list-style: none;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.6rem;
+  margin-left: 4rem;
+  padding: 4rem 0 4rem 0;
+  color: #5e607a;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-list li:hover {
+  cursor: pointer;
+  box-shadow: inset 0 -0.3rem 0 0 #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-list li span {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.2rem;
+  font-weight: 900;
+}
+
+.nav-list li {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.27rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.hamburger,
+.mobile-menu {
+  display: none;
+}
+
+/* DESKTOP MAIN */
+.background-img-desktop {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.background-img-tablet {
+  display: none;
+}
+
+.background-img-mobile {
+  display: none;
+}
+
+/*************** TABLET VIEW ***************/
+@media screen and (max-width: 768px) {
+  /* TABLET HEADER */
+  .navbar {
+    margin-left: 4rem;
+    margin-top: 0;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .nav-list {
+    padding: 0 4.8rem 0 4.8rem;
+  }
+
+  .nav-list li span {
+    display: none;
+  }
+
+  /* TABLET MAIN */
+
+  .background-img-desktop {
+    display: none;
+  }
+
+  .background-img-tablet {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1;
+  }
+}
+
+/*************** MOBILE VIEW ***************/
+
+/* MOBILE HEADER */
+
+/* MOBILE MAIN */
+@media screen and (max-width: 375px) {
+  .background-img-tablet {
+    display: none;
+  }
+
+  .background-img-mobile {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1;
+  }
+  /* MOBILE MENU & SIDEBAR */
+
+  .navbar {
+    margin: 2.4rem 2.4rem 0 2.4rem;
+    width: 87.03%;
+  }
+
+  .hamburger,
+  .mobile-menu {
+    display: block;
+    z-index: 2;
+  }
+
+  .mobile-menu {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(1.777rem);
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    width: 25.6rem;
+    height: 100vh;
+    padding: 14.4rem 3rem 0 3rem;
+    box-shadow: 2px 5px 25px rgb(0, 0, 0 /15%);
+    transition: all 0.2s ease-in-out;
+    z-index: 10;
+  }
+
+  .mobile-menu.open {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    cursor: pointer;
+  }
+
+  .sidebar-list li span {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: 0.2rem;
+    font-weight: 900;
+  }
+
+  .sidebar-list li {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: 0.27rem;
+    color: #fff;
+    text-transform: uppercase;
+    list-style: none;
+    margin-bottom: 3.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    height: 2vh;
+  }
+
+  .sidebar-list li:hover {
+    cursor: pointer;
+    box-shadow: inset 0 -0.3rem 0 0 #fff;
+    transition: all 0.2s ease-in-out;
+    padding-bottom: 0.5rem;
+  }
+
+  /* MOBILE HEADER */
+  .nav-list {
+    display: none;
+  }
+}
