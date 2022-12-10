@@ -109,6 +109,79 @@ header {
   display: none;
 }
 
+/* INFO SECTION */
+.info {
+  position: absolute;
+  top: 38.7rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 74vw;
+  max-width: 105rem;
+  z-index: 2;
+}
+
+.info-txt > h3 {
+  font-family: "Barlow Condensed";
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.425rem;
+  color: #d0d6f9;
+  margin-bottom: 2.4rem;
+}
+
+.info-txt > h1 {
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15rem;
+  line-height: 17.2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+}
+
+.info-txt > p {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  color: #d0d6f9;
+  width: 44.5rem;
+}
+
+.info-explore {
+  background-color: #fff;
+  width: 27.4rem;
+  height: 27.4rem;
+  border-radius: 50%;
+  position: relative;
+}
+
+.info-explore > p {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+  width: 27.4rem;
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 37px;
+  letter-spacing: 2px;
+  color: #0b0d17;
+}
+
 /*************** TABLET VIEW ***************/
 @media screen and (max-width: 768px) {
   /* TABLET HEADER */
@@ -122,7 +195,11 @@ header {
   }
 
   .nav-list {
-    padding: 0 4.8rem 0 4.8rem;
+    padding: 0 7.8rem 0 4.8rem;
+  }
+
+  .nav-list li:nth-of-type(1) {
+    margin-left: 0;
   }
 
   .nav-list li span {
@@ -142,14 +219,43 @@ header {
     object-fit: cover;
     z-index: 1;
   }
+
+  /* INFO SECTION */
+  .info {
+    top: 20rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .info-txt {
+    text-align: center;
+  }
+
+  .info-txt > h3 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .info-txt > h1 {
+    line-height: 15rem;
+  }
+
+  .info-txt > p {
+    font-size: 1.5rem;
+    line-height: 2.8rem;
+  }
+
+  .info-explore {
+    margin-top: 15.6rem;
+  }
 }
 
 /*************** MOBILE VIEW ***************/
 
-/* MOBILE HEADER */
-
-/* MOBILE MAIN */
 @media screen and (max-width: 375px) {
+  /* MOBILE MAIN */
   .background-img-tablet {
     display: none;
   }
@@ -236,5 +342,25 @@ header {
   /* MOBILE HEADER */
   .nav-list {
     display: none;
+  }
+
+  /* INFO SECTION */
+  .info-txt > h3 {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: 0.27rem;
+  }
+
+  .info-txt > h1 {
+    font-size: 8rem;
+    line-height: 10rem;
+  }
+
+  .info-txt > p {
+    width: 30rem;
+  }
+
+  .info-explore {
+    margin-top: 8rem;
   }
 }
