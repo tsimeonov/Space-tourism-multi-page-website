@@ -90,13 +90,12 @@ header {
 .mobile-menu {
   display: none;
 }
-
 /* DESKTOP MAIN */
 .background-img-desktop {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .background-img-tablet {
@@ -107,77 +106,148 @@ header {
   display: none;
 }
 
-/* INFO SECTION */
-.info {
+/* DESKTOP INFO SECTION DESTINATION */
+main {
+  position: relative;
+}
+
+.info-section {
   position: absolute;
-  top: 38.7rem;
+  top: 20rem;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
   width: 74vw;
   max-width: 105rem;
   z-index: 2;
 }
 
-.info-txt > h3 {
+.info-section-title span {
   font-family: "Barlow Condensed";
-  text-transform: uppercase;
   font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 4.725px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  padding-right: 2.8rem;
+  opacity: 0.25;
+}
+
+.info-section-title h2 {
+  font-family: "Barlow Condensed";
   font-weight: 400;
   font-size: 2.8rem;
-  line-height: 3.4rem;
-  letter-spacing: 0.425rem;
-  color: #d0d6f9;
-  margin-bottom: 2.4rem;
-}
-
-.info-txt > h1 {
-  font-family: "Bellefair";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15rem;
-  line-height: 17.2rem;
-  color: #ffffff;
+  letter-spacing: 0.47rem;
   text-transform: uppercase;
-  margin-bottom: 2.4rem;
+  color: #ffffff;
 }
 
-.info-txt > p {
+.info-section-planets {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6.4rem;
+  color: #fff;
+}
+
+.info-section-main {
+  width: 44.4rem;
+}
+
+.info-section-main ul {
+  display: flex;
+  margin-bottom: 4.5rem;
+}
+
+.info-section-main ul li {
+  list-style: none;
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: 0.27rem;
+  margin-left: 3.5rem;
+  color: #d0d6f9;
+  text-transform: uppercase;
+  height: 2vh;
+  transition: all 0.2s ease-in-out;
+}
+
+.info-section-main ul li:hover {
+  cursor: pointer;
+  box-shadow: inset 0 -0.3rem 0 0 #fff;
+  transition: all 0.2s ease-in-out;
+  padding-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.info-section-main ul li:nth-child(1) {
+  margin-left: 0;
+}
+
+.info-section-main h2 {
+  font-family: "Bellefair";
+  font-weight: 400;
+  font-size: 10rem;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.info-section-main > p {
   font-family: "Barlow";
-  font-style: normal;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 3.2rem;
-  color: #d0d6f9;
-  width: 44.5rem;
+  color: #fff;
+  opacity: 0.8;
+  padding-bottom: 5.4rem;
+  border-bottom: 1px solid #383b4b;
 }
 
-.info-explore {
-  background-color: #fff;
-  width: 27.4rem;
-  height: 27.4rem;
-  border-radius: 50%;
-  position: relative;
+.info-section-distance-time {
+  display: flex;
+  margin-top: 2.8rem;
 }
 
-.info-explore > p {
-  position: absolute;
-  top: 50%;
-  text-align: center;
-  transform: translateY(-50%);
-  text-transform: uppercase;
-  width: 27.4rem;
-  font-family: "Bellefair";
-  font-style: normal;
+.distance span {
+  font-family: "Barlow Condensed";
   font-weight: 400;
-  font-size: 32px;
-  line-height: 37px;
-  letter-spacing: 2px;
-  color: #0b0d17;
+  font-size: 1.4rem;
+  letter-spacing: 0.22rem;
+  text-transform: uppercase;
+  color: #d0d6f9;
+}
+
+.distance p {
+  font-family: "Bellefair";
+  font-weight: 400;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  margin-top: 1.2rem;
+  color: #ffffff;
+}
+
+.time {
+  margin-left: 7.9rem;
+}
+
+.time span {
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: 0.22rem;
+  text-transform: uppercase;
+  color: #d0d6f9;
+}
+
+.time p {
+  font-family: "Bellefair";
+  font-weight: 400;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  margin-top: 1.2rem;
+  color: #ffffff;
 }
 
 /*************** TABLET VIEW ***************/
@@ -209,7 +279,6 @@ header {
   .nav-list li span {
     display: none;
   }
-
   /* TABLET MAIN */
   .background-img-desktop {
     display: none;
@@ -220,38 +289,53 @@ header {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    z-index: 1;
   }
 
-  /* INFO SECTION */
-  .info {
-    top: 20rem;
+  /* TABLET INFO SECTION DESTINATION */
+  .info-section {
+    width: 88vw;
+  }
+
+  .info-section-title span {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.33rem;
+  }
+
+  .info-section-title h2 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.33rem;
+  }
+
+  .info-section-planets {
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
   }
 
-  .info-txt {
+  .info-section-main {
+    width: 51.4rem;
     text-align: center;
   }
 
-  .info-txt > h3 {
-    font-size: 2rem;
-    line-height: 2.4rem;
-    letter-spacing: 0.3rem;
+  .info-section-main ul {
+    justify-content: center;
+    margin-top: 5.3rem;
   }
 
-  .info-txt > h1 {
-    line-height: 15rem;
+  .info-section-main h2 {
+    font-size: 8rem;
+    line-height: 9.2rem;
+    margin-bottom: 3rem;
   }
 
-  .info-txt > p {
-    font-size: 1.5rem;
+  .info-section-main > p {
+    font-size: 1.6rem;
     line-height: 2.8rem;
   }
 
-  .info-explore {
-    margin-top: 15.6rem;
+  .info-section-distance-time {
+    justify-content: center;
   }
 }
 
@@ -268,13 +352,18 @@ header {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    z-index: 1;
+    /* z-index: 1; */
   }
+
   /* MOBILE MENU & SIDEBAR */
 
   .navbar {
     margin: 2.4rem 2.4rem 0 2.4rem;
     width: 87.03%;
+  }
+
+  .hamburger {
+    cursor: pointer;
   }
 
   .hamburger,
@@ -351,23 +440,57 @@ header {
     display: none;
   }
 
-  /* INFO SECTION */
-  .info-txt > h3 {
+  /* MOBILE INFO SECTION DESTINATION */
+  .info-section-title {
+    text-align: center;
+  }
+
+  .info-section-planets {
+    margin-top: 3.2rem;
+  }
+
+  .info-section-planet > img {
+    width: 17rem;
+  }
+
+  .info-section-title span {
     font-size: 1.6rem;
-    line-height: 1.9rem;
+    letter-spacing: 0.27rem;
+    padding-right: 1.8rem;
+  }
+
+  .info-section-title h2 {
+    font-size: 1.6rem;
     letter-spacing: 0.27rem;
   }
 
-  .info-txt > h1 {
-    font-size: 8rem;
-    line-height: 10rem;
+  .info-section-main {
+    width: 32rem;
   }
 
-  .info-txt > p {
-    width: 30rem;
+  .info-section-main ul {
+    margin: 2.6rem 0 2rem 0;
   }
 
-  .info-explore {
-    margin-top: 8rem;
+  .info-section-main ul li {
+    font-size: 1.4rem;
+    letter-spacing: 0.23rem;
+  }
+
+  .info-section-main h2 {
+    font-size: 5.6rem;
+    margin-bottom: 0;
+  }
+
+  .info-section-main > p {
+    padding-bottom: 3.2rem;
+  }
+
+  .info-section-distance-time {
+    flex-direction: column;
+  }
+
+  .time {
+    margin: 3.2rem 0 0 0;
   }
 }
